@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   --darkColor: rgb(32, 33, 36);
   --lightColor: wheat;
@@ -7,6 +13,8 @@
   --primeBorder: dashed 2px var(--lightColor);
   --secondBorder: solid 1px var(--lightColor);
   --borderRadius: 1rem;
+  --z-fixed: 100;
+  --header-height: 3.5rem;
 }
 
 ::selection {
@@ -25,12 +33,11 @@ html {
 }
 
 body {
+  /* margin-left: 18%;
+  margin-right: 18%; */
   box-sizing: border-box;
-  font-size: 3rem;
-  line-height: 1.5;
-  font-family: 'Nunito', 'Outfit', sans-serif;
+  font-family: sans-serif;
   background-color: var(--darkColor);
-  text-align: center;
   color: var(--lightColor);
 }
 
@@ -64,9 +71,8 @@ h3 {
   color: var(--primeColor);
 }
 
-header {
-  width: 100%;
-  margin: 0 auto;
+ul {
+  list-style: none;
 }
 
 main {
