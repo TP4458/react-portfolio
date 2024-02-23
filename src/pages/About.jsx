@@ -1,3 +1,7 @@
-export default function Home() {
-  return <p>test</p>;
+export default function About() {
+  return (
+    <div>
+      <p>ABOUT PAGE</p>
+    </div>
+  );
 }

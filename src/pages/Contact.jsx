@@ -1,3 +1,7 @@
-export default function Home() {
-  <p>GDZIE TO </p>;
+export default function Contact() {
+  return (
+    <div>
+      <p>CONTACT</p>
+    </div>
+  );
 }
