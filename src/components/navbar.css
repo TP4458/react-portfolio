@@ -1,0 +1,73 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 100%;
+  color: var(--gold);
+  position: sticky;
+  top: 0;
+  background-color: var(--black2);
+  border-bottom: 1px solid var(--gold);
+  z-index: 1;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav-wrapper {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.home,
+.projects,
+.contact {
+  width: 7rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.nav-wrapper div:hover {
+  color: var(--white);
+}
+
+.nav-wrapper a {
+  color: var(--gold);
+}
+
+.projects {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project {
+  cursor: pointer;
+}
+
+.projects > * {
+  margin: 0 0.2rem;
+}
+
+.open-dropdown {
+  position: absolute;
+  top: calc(100% + 2.1rem);
+  background-color: var(--black2);
+  border-left: 1px solid var(--gold);
+  border-right: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  border-radius: 0 0 5px 5px;
+  width: 12rem;
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+.open-dropdown p {
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.open-dropdown p:hover {
+  color: var(--gold);
+}
