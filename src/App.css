@@ -1,8 +1,6 @@
-@import-normalize;
-
 :root {
   --darkColor: rgb(32, 33, 36);
-  --lightColor: wheat;
+  --lightColor: rgb(255, 159, 34);
   --primeColor: rgba(150, 202, 27, 0.911);
   --secondColor: rgba(223, 100, 78, 0.911);
   --secondColor: rgba(207, 126, 120, 0.911);
@@ -78,13 +76,17 @@ main {
 }
 
 svg:hover {
-  transform: scale(1.5);
+  transform: scale(125%);
   transition: all 0.5s ease-in-out;
 }
 
-.project:hover,
-button:hover {
+.project:hover {
   transform: scale(1.2);
+  transition: all 1s ease-in-out;
+}
+
+button:hover {
+  transform: scale(0.95);
   transition: all 1s ease-in-out;
 }
 

@@ -1,21 +1,28 @@
 header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 5rem;
+  /* height: 100%; */
   width: 100%;
-  color: var(--gold);
+  color: var(--lightColor);
   position: sticky;
   top: 0;
-  background-color: var(--black2);
-  border-bottom: 1px solid var(--gold);
+  background-color: var(--darkColor);
+  border-bottom: 1px solid var(--lightColor);
   z-index: 1;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Kode Mono', sans-serif;
 }
 
 .nav-wrapper {
   display: flex;
-  width: 90%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -23,51 +30,19 @@ header {
 .home,
 .projects,
 .contact {
-  width: 7rem;
-  font-size: 0.9rem;
+  width: 15rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 .nav-wrapper div:hover {
-  color: var(--white);
+  color: var(--primeColor);
+  text-decoration: underline;
 }
 
 .nav-wrapper a {
-  color: var(--gold);
-}
-
-.projects {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.project {
-  cursor: pointer;
-}
-
-.projects > * {
-  margin: 0 0.2rem;
-}
-
-.open-dropdown {
-  position: absolute;
-  top: calc(100% + 2.1rem);
-  background-color: var(--black2);
-  border-left: 1px solid var(--gold);
-  border-right: 1px solid var(--gold);
-  border-bottom: 1px solid var(--gold);
-  border-radius: 0 0 5px 5px;
-  width: 12rem;
-  padding: 1.5rem 0 0.5rem 0;
-}
-
-.open-dropdown p {
-  margin-bottom: 1.5rem;
-  color: var(--white);
-  cursor: pointer;
-}
-
-.open-dropdown p:hover {
-  color: var(--gold);
+  color: var(--lightColor);
+  text-decoration: none;
 }

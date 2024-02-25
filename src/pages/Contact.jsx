@@ -1,16 +1,17 @@
-import React from 'react';
-import { Grid, IconButton, Typography, Link } from '@mui/material';
+// import React from 'react';
+import { Grid, IconButton, Link } from '@mui/material';
 import { Icon } from '@iconify/react';
 import links from '../data/links';
+import { Typewriter } from 'react-simple-typewriter';
 
 export default function Contact() {
+  const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
   const styles = {
     icon: {
-      color: 'wheat',
+      color: 'white',
       fontSize: '10rem',
       backgroundColor: 'rgb(24, 24, 24)',
       borderRadius: '10px',
-      margin: '0.5rem',
     },
     container: {
       marginTop: '10vh',
@@ -19,49 +20,59 @@ export default function Contact() {
     link: {
       underline: 'none',
       textDecoration: 'none',
-      color: 'wheat',
+      fontFamily: fontFamily,
     },
-    footer: {
-      fontSize: '0.75rem',
+    typewriter: {
+      fontFamily: ['Kode Mono', 'Poppins', 'Roboto'],
+      letterSpacing: '4px',
+      marginBottom: '50px',
+      fontSize: '2.5rem',
+      float: 'left',
+    },
+    typography: {
+      fontFamily: ['Kode Mono', 'Poppins', 'Roboto'],
+      fontSize: '1.4rem',
     },
   };
 
   return (
     <>
       <div>
-        <h3>CONTACT</h3>
-        <p style={{ fontFamily: 'Courier', fontWeight: 'bold' }}>
-          <Typography
-            words={['Feel free to contact me!', "Let's get in Touch!"]}
-            loop={0}
+        <p style={styles.typewriter}>
+          {' '}
+          <Typewriter
+            words={['YOU CAN CONTACT ME HERE:']}
+            loop={1}
             cursor
-            cursorStyle="|"
-            typeSpeed={70}
-            deleteSpeed={50}
+            cursorStyle="▢"
+            deleteSpeed={9}
+            typeSpeed={110}
             delaySpeed={1000}
           />
         </p>
+
         <Grid
           container
+          // spacing={8}
           direction="row"
-          justifyContent="center"
+          justifyContent="space-evenly"
           alignItems="center"
           rowSpacing={2}
-          style={{ marginTop: '1vh' }}
+          style={{ marginTop: '2vh' }}
         >
           {links.map((link, i) => (
             <div key={i}>
               <Link component="a" href={link.href} style={styles.link}>
                 <IconButton
                   key={i}
-                  color="secondary"
+                  color="inherit"
                   size="medium"
                   style={styles.icon}
                 >
                   <Icon icon={link.icon} />
                 </IconButton>
               </Link>
-              <Typography>{link.name}</Typography>
+              <p style={styles.typography}>{link.name}</p>
             </div>
           ))}
         </Grid>
