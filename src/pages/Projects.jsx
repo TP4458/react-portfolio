@@ -21,7 +21,7 @@ const styles = {
     height: '100%',
   },
   cardContainer: {
-    maxWidth: '100%',
+    maxWidth: '85%',
     margin: '3rem auto',
     background: 'inherit',
   },
