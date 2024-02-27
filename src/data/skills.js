@@ -1,6 +1,5 @@
 const skills = [
   {
-    HTML: 'iconoir:html5',
     skill: 'HTML',
     icon: 'iconoir:html5',
     href: 'https://html.spec.whatwg.org/multipage/',
@@ -15,7 +14,11 @@ const skills = [
     icon: 'teenyicons:javascript-outline',
     href: 'https://www.javascript.com/',
   },
-  { skill: 'Node.js', icon: 'la:node', href: 'https://nodejs.org/en/' },
+  {
+    skill: 'Node.js',
+    icon: 'la:node',
+    href: 'https://nodejs.org/en/',
+  },
   { skill: 'npm', icon: 'akar-icons:npm-fill', href: 'https://www.npmjs.com/' },
   {
     skill: 'Express',

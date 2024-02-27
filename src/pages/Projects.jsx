@@ -19,11 +19,11 @@ const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
 const styles = {
   mainContainer: {
     background: 'rgb(32, 33, 36)',
-    height: '100%',
     fontFamily: fontFamily,
   },
   cardContainer: {
     maxWidth: '85%',
+    height: '85%',
     margin: '3rem auto',
     background: 'inherit',
   },
@@ -77,9 +77,10 @@ export default function Projects() {
                   <CardMedia
                     component="img"
                     alt="project"
-                    height="300vh"
-                    // image={project.image}
+                    height="200vh"
+                    image={project.image}
                     style={styles.img}
+                    sx={{ objectFit: 'contain' }}
                   />
                   <CardContent>
                     <Typography
