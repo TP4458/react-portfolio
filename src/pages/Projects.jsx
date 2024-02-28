@@ -18,14 +18,16 @@ const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
 
 const styles = {
   mainContainer: {
-    background: 'rgb(32, 33, 36)',
+    display: 'inlineFlex',
+    background: 'var(--darkColor)',
     fontFamily: fontFamily,
   },
   cardContainer: {
-    maxWidth: '85%',
-    height: '85%',
+    width: '80%',
+    height: '450px',
     margin: '3rem auto',
-    background: 'inherit',
+    background: 'var(--secondColor)',
+    borderRadius: '10px',
   },
   primaryColor: {
     color: 'white',
@@ -34,40 +36,42 @@ const styles = {
     fontFamily: fontFamily,
   },
   secondaryColor: {
-    color: 'rgba(150, 202, 27, 0.911)',
+    color: 'lime',
     fontFamily: fontFamily,
     fontWeight: 'Bold',
   },
   img: {
-    background: 'rgb(32, 33, 36)',
-    maxWidth: '100%',
+    background: 'inherit',
     objectFit: 'cover top',
   },
   typewriter: {
     float: 'left',
-    marginBottom: '20px',
+    marginBottom: '80px',
+  },
+  CardActions: {
+    alignItems: 'flexEnd',
+    justifyContent: 'flexEnd',
   },
 };
 
 export default function Projects() {
   return (
     <>
+      <div style={styles.typewriter}>
+        <Typewriter
+          words={['SEE MY PROJECTS:']}
+          loop={1}
+          cursor
+          cursorStyle="▢"
+          deleteSpeed={9}
+          typeSpeed={140}
+          delaySpeed={1000}
+        />
+      </div>
       <Box component="div" style={styles.mainContainer}>
-        <div style={styles.typewriter}>
-          {' '}
-          <Typewriter
-            words={['SEE MY PROJECTS:']}
-            loop={1}
-            cursor
-            cursorStyle="▢"
-            deleteSpeed={9}
-            typeSpeed={140}
-            delaySpeed={1000}
-          />
-        </div>
         <Grid container justify="center">
           {projects.map((project, i) => (
-            <Grid item xs={12} sm={6} md={4} xl={3} key={i}>
+            <Grid item xs={12} sm={6} md={4} xl={4} key={i}>
               <Card
                 style={styles.cardContainer}
                 elevation="8"
@@ -84,19 +88,22 @@ export default function Projects() {
                   />
                   <CardContent>
                     <Typography
+                      height="9vh"
                       variant="h5"
                       gutterBottom
                       style={styles.secondaryColor}
                     >
                       {project.name}
                     </Typography>
-                    <Typography style={styles.primaryColor}>
+                    <Typography height="10vh" style={styles.description}>
                       {project.description}
                     </Typography>
-                    <Typography>{project.Technologies}</Typography>
+                    <Typography height="2vh" style={styles.primaryColor}>
+                      {project.Technologies}
+                    </Typography>
                   </CardContent>
                 </CardActionArea>
-                <CardActions>
+                <CardActions style={styles.CardActions}>
                   <Button
                     variant="outlined"
                     style={styles.primaryColor}

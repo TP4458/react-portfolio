@@ -1,9 +1,8 @@
 :root {
-  --darkColor: rgb(32, 33, 36);
+  --darkColor: rgb(25, 27, 32);
   --lightColor: rgb(255, 159, 34);
   --primeColor: rgba(150, 202, 27, 0.911);
-  --secondColor: rgba(223, 100, 78, 0.911);
-  --secondColor: rgba(207, 126, 120, 0.911);
+  --secondColor: rgba(47, 47, 54, 0.911);
   --primeBorder: dashed 2px var(--lightColor);
   --secondBorder: solid 1px var(--lightColor);
   --borderRadius: 1rem;
@@ -25,12 +24,12 @@ html {
 }
 
 body {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
   box-sizing: border-box;
   font-size: 3rem;
   line-height: 1.5;
-  font-family: 'Nunito', 'Outfit', sans-serif;
+  font-family: 'Kode Mono', 'Poppins', sans-serif;
   background-color: var(--darkColor);
   text-align: center;
   color: var(--lightColor);
@@ -81,7 +80,7 @@ svg:hover {
 }
 
 .project:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 1s ease-in-out;
 }
 
@@ -118,14 +117,4 @@ button:hover {
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }
