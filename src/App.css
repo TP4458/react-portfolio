@@ -79,10 +79,10 @@ svg:hover {
   transition: all 0.5s ease-in-out;
 }
 
-.project:hover {
+/* .project:hover {
   transform: scale(1.1);
   transition: all 1s ease-in-out;
-}
+} */
 
 button:hover {
   transform: scale(0.95);
