@@ -2,14 +2,12 @@
 import React from 'react';
 import projects from '../data/projects';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import {
   CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
-  Paper,
   Button,
 } from '@mui/material';
 // import Button from '@mui/material/Button';
@@ -23,7 +21,6 @@ const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 5,
   },
@@ -58,20 +55,21 @@ const styles = {
     borderRadius: '10px',
   },
   primaryColor: {
-    color: 'white',
+    color: 'var(--tetriaryColor)',
     border: 'none',
     // fontWeight: 'bold',
     fontFamily: fontFamily,
   },
   secondaryColor: {
-    color: 'lime',
+    color: 'var(--primeColor)',
     fontFamily: fontFamily,
     fontWeight: 'Bold',
   },
   img: {
-    background: 'inherit',
-    objectFit: 'cover top',
+    background: 'var(--secondColor)',
+    objectFit: 'cover',
   },
+
   typewriter: {
     float: 'left',
     marginBottom: '20px',

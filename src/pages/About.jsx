@@ -13,8 +13,9 @@ const styles = {
     borderRadius: '10px',
   },
   icon: {
-    fontSize: '2rem',
+    fontSize: '4rem',
     backgroundColor: 'inherit',
+    // color:"var(--primeColor)";
     padding: '0.5rem',
   },
   img: {},
@@ -65,7 +66,7 @@ export default function About() {
           {skills.map((skill, i) => (
             <Link key={i} href={skill.href} underline="none" target="_blank">
               <Box item key={i} md={1} style={styles.icon}>
-                <Icon icon={skill.icon} />
+                <Icon color="var(--primeColor)" icon={skill.icon} />
                 <Typography>{skill.skill}</Typography>
               </Box>
             </Link>

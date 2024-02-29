@@ -1,11 +1,20 @@
 :root {
-  --darkColor: rgb(25, 27, 32);
+  --darkColor: #29384d;
+  --lightColor: #d0e8f2;
+  --primeColor: #fae12c;
+  --secondColor: #394850;
+  --tetriaryColor: #e3e5e7;
+  --primeBorder: dashed 2px var(--lightColor);
+  --secondBorder: solid 1px var(--lightColor);
+  --borderRadius: 1rem;
+
+  /* --darkColor: rgb(25, 27, 32);
   --lightColor: rgb(255, 159, 34);
   --primeColor: rgba(150, 202, 27, 0.911);
   --secondColor: rgba(47, 47, 54, 0.911);
   --primeBorder: dashed 2px var(--lightColor);
   --secondBorder: solid 1px var(--lightColor);
-  --borderRadius: 1rem;
+  --borderRadius: 1rem; */
 }
 
 ::selection {
@@ -98,11 +107,11 @@ button:hover {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;

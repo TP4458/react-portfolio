@@ -8,7 +8,7 @@ export default function Contact() {
   const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
   const styles = {
     icon: {
-      color: 'white',
+      color: 'var(--tetriaryColor)',
       fontSize: '10rem',
       backgroundColor: 'rgb(24, 24, 24)',
       borderRadius: '10px',
@@ -27,7 +27,6 @@ export default function Contact() {
       letterSpacing: '4px',
       marginBottom: '50px',
       fontSize: '2.5rem',
-      float: 'left',
     },
     typography: {
       fontFamily: ['Kode Mono', 'Poppins', 'Roboto'],
