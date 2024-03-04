@@ -4,6 +4,8 @@ import { Container, Typography, Grid, Link, Box } from '@mui/material';
 import { Typewriter } from 'react-simple-typewriter';
 import skills from '../data/skills';
 
+const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
+
 const styles = {
   mainGrid: {},
   txtGrid: { flexShrink: 1, padding: '5rem', placeItems: 'center' },
@@ -20,6 +22,12 @@ const styles = {
   },
   img: {},
   p: {},
+  textColor: {
+    color: 'var(--tetriaryColor)',
+    border: 'none',
+    // fontWeight: 'bold',
+    fontFamily: fontFamily,
+  },
 };
 
 export default function About() {
@@ -67,7 +75,7 @@ export default function About() {
             <Link key={i} href={skill.href} underline="none" target="_blank">
               <Box item key={i} md={1} style={styles.icon}>
                 <Icon color="var(--primeColor)" icon={skill.icon} />
-                <Typography>{skill.skill}</Typography>
+                <Typography style={styles.textColor}>{skill.skill}</Typography>
               </Box>
             </Link>
           ))}

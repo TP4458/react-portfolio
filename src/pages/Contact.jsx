@@ -15,6 +15,7 @@ export default function Contact() {
     },
     container: {
       marginTop: '10vh',
+      marginBottom: '30vh',
       textAlign: 'center',
     },
     link: {
@@ -25,7 +26,8 @@ export default function Contact() {
     typewriter: {
       fontFamily: ['Kode Mono', 'Poppins', 'Roboto'],
       letterSpacing: '4px',
-      marginBottom: '50px',
+      marginBottom: '20vh',
+      marginTop: '12vh',
       fontSize: '2.5rem',
     },
     typography: {
@@ -52,12 +54,12 @@ export default function Contact() {
 
         <Grid
           container
-          // spacing={8}
+          // spacing={2}
           direction="row"
           justifyContent="space-evenly"
           alignItems="center"
           rowSpacing={2}
-          style={{ marginTop: '2vh' }}
+          style={styles.container}
         >
           {links.map((link, i) => (
             <div key={i}>

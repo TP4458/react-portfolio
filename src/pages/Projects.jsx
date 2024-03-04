@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from 'react';
-import React from 'react';
+// import React from 'react';
 import projects from '../data/projects';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import {
   CardActionArea,
@@ -44,26 +44,28 @@ const styles = {
     flexDirection: 'column',
     background: 'var(--darkColor)',
     fontFamily: fontFamily,
-    // minWidth: '0px',
-    // minHeight: '0px',
   },
   cardContainer: {
     width: '66%',
-    height: '450px',
+    height: '55rem',
     margin: '3rem auto',
     background: 'var(--secondColor)',
     borderRadius: '10px',
   },
-  primaryColor: {
+  textColor: {
     color: 'var(--tetriaryColor)',
     border: 'none',
     // fontWeight: 'bold',
     fontFamily: fontFamily,
   },
-  secondaryColor: {
+  textColor2: {
     color: 'var(--primeColor)',
     fontFamily: fontFamily,
     fontWeight: 'Bold',
+  },
+  textColor3: {
+    color: 'var(--primeColor)',
+    fontFamily: fontFamily,
   },
   img: {
     background: 'var(--secondColor)',
@@ -77,6 +79,13 @@ const styles = {
   CardActions: {
     alignItems: 'flexEnd',
     justifyContent: 'flexEnd',
+  },
+  description: {
+    color: 'var(--tetriaryColor)',
+    fontFamily: fontFamily,
+    textWrap: 'balance',
+    textAlign: 'left',
+    // position: 'absolute',
   },
 };
 
@@ -115,24 +124,24 @@ export default function Projects() {
                 <CardMedia
                   component="img"
                   alt="project"
-                  height="200vh"
+                  height="250rem"
                   image={project.image}
                   style={styles.img}
                   sx={{ objectFit: 'contain' }}
                 />
                 <CardContent>
                   <Typography
-                    height="9vh"
+                    height="4em"
                     variant="h5"
                     gutterBottom
-                    style={styles.secondaryColor}
+                    style={styles.textColor2}
                   >
                     {project.name}
                   </Typography>
-                  <Typography height="10vh" style={styles.description}>
-                    {project.description}
+                  <Typography height="13em" style={styles.description}>
+                    test
                   </Typography>
-                  <Typography height="2vh" style={styles.primaryColor}>
+                  <Typography style={styles.textColor3}>
                     {project.Technologies}
                   </Typography>
                 </CardContent>
@@ -140,7 +149,7 @@ export default function Projects() {
               <CardActions style={styles.CardActions}>
                 <Button
                   variant="outlined"
-                  style={styles.primaryColor}
+                  style={styles.textColor}
                   startIcon={<GitHub />}
                   href={project.gitHub}
                   target="_blank"
@@ -150,7 +159,7 @@ export default function Projects() {
                 {project.deployed && (
                   <Button
                     variant="outlined"
-                    style={styles.primaryColor}
+                    style={styles.textColor}
                     startIcon={<DoubleArrow />}
                     href={project.deployed}
                     target="_blank"
@@ -161,7 +170,7 @@ export default function Projects() {
                 {project.video && (
                   <Button
                     variant="outlined"
-                    style={styles.primaryColor}
+                    style={styles.textColor}
                     startIcon={<SmartDisplay />}
                     href={project.video}
                     target="_blank"

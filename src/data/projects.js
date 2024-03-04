@@ -16,6 +16,7 @@ const projects = [
   {
     name: 'Text Editor - PWA',
     Technologies: 'Webpack+Workbox, IndexedDB, JS, Express, NodeJS ',
+    description: '234',
     image: pwa,
     gitHub: 'https://github.com/TP4458/Text-Editor-progressive-web-app-PWA',
     deployed: 'https://cantharellus-cibarius.onrender.com/',
