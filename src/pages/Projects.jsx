@@ -1,5 +1,4 @@
-// import React, { useState, useEffect } from 'react';
-// import React from 'react';
+import React from 'react';
 import projects from '../data/projects';
 // import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -9,6 +8,7 @@ import {
   CardContent,
   CardMedia,
   Button,
+  Container,
 } from '@mui/material';
 // import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -22,15 +22,15 @@ const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
-    items: 5,
+    items: 3,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 2,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -46,8 +46,8 @@ const styles = {
     fontFamily: fontFamily,
   },
   cardContainer: {
-    width: '66%',
-    height: '55rem',
+    width: '50rem',
+    height: '60rem',
     margin: '3rem auto',
     background: 'var(--secondColor)',
     borderRadius: '10px',
@@ -83,15 +83,36 @@ const styles = {
   description: {
     color: 'var(--tetriaryColor)',
     fontFamily: fontFamily,
-    textWrap: 'balance',
+    // textWrap: 'balance',
     textAlign: 'left',
+    height: '17em',
+    // maxHeight: '19em',
+    fontSize: 12,
+    overflowY: 'auto',
+    paddingRight: 9,
+    paddingLeft: 9,
+    letterSpacing: 0.5,
+    lineHeight: 1.7,
     // position: 'absolute',
+  },
+
+  technologies: {
+    color: 'var(--primeColor)',
+    fontFamily: fontFamily,
+    paddingTop: 5,
   },
 };
 
 export default function Projects() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
-    <div style={styles.mainContainer}>
+    <div
+      // sx={{ maxWidth: 800, margin: 'auto', mt: 5 }}
+      style={styles.mainContainer}
+    >
       {/* <Box sx={{ maxWidth: 800, margin: 'auto', mt: 5 }}> */}
       <div style={styles.typewriter}>
         <Typewriter
@@ -106,9 +127,9 @@ export default function Projects() {
       </div>
       <div>
         <Carousel
+          containerClass="container"
           swipeable={true}
           draggable={true}
-          showDots={true}
           infinite={true}
           responsive={responsive}
         >
@@ -120,32 +141,33 @@ export default function Projects() {
               elevation="8"
               className="project"
             >
-              <CardActionArea href={project.gitHub} target="_blank">
+              <CardActionArea onClick={handleOpen}>
                 <CardMedia
                   component="img"
                   alt="project"
-                  height="250rem"
+                  height="230rem"
                   image={project.image}
                   style={styles.img}
                   sx={{ objectFit: 'contain' }}
                 />
-                <CardContent>
-                  <Typography
-                    height="4em"
-                    variant="h5"
-                    gutterBottom
-                    style={styles.textColor2}
-                  >
-                    {project.name}
-                  </Typography>
-                  <Typography height="13em" style={styles.description}>
-                    test
-                  </Typography>
-                  <Typography style={styles.textColor3}>
-                    {project.Technologies}
-                  </Typography>
-                </CardContent>
               </CardActionArea>
+              <CardContent>
+                <Typography
+                  height="3.5em"
+                  variant="h5"
+                  gutterBottom
+                  style={styles.textColor2}
+                >
+                  {project.name}
+                </Typography>
+                <Typography style={styles.description}>
+                  {project.description}
+                </Typography>
+                <Typography style={styles.technologies}>
+                  {project.Technologies}
+                </Typography>
+              </CardContent>
+
               <CardActions style={styles.CardActions}>
                 <Button
                   variant="outlined"
