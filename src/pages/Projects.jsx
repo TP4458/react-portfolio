@@ -3,50 +3,48 @@ import projects from '../data/projects';
 // import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import {
+  Grid,
+  Box,
   CardActionArea,
   CardActions,
   CardContent,
   CardMedia,
   Button,
   Container,
+  createTheme,
 } from '@mui/material';
 // import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { GitHub, DoubleArrow, SmartDisplay } from '@mui/icons-material';
 import { Typewriter } from 'react-simple-typewriter';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import { ThemeProvider } from '@emotion/react';
+// import Carousel from 'react-multi-carousel';
+// import 'react-multi-carousel/lib/styles.css';
 
 const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 3,
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 2000,
+    },
   },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 2,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
+});
 
 const styles = {
   mainContainer: {
-    display: 'flex',
-    flexDirection: 'column',
+    // display: 'flex',
+    // flexDirection: 'column',
     background: 'var(--darkColor)',
     fontFamily: fontFamily,
   },
   cardContainer: {
-    width: '50rem',
+    flex: 1,
+    width: '45rem',
     height: '60rem',
     margin: '3rem auto',
     background: 'var(--secondColor)',
@@ -109,103 +107,95 @@ export default function Projects() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div
-      // sx={{ maxWidth: 800, margin: 'auto', mt: 5 }}
-      style={styles.mainContainer}
-    >
-      {/* <Box sx={{ maxWidth: 800, margin: 'auto', mt: 5 }}> */}
-      <div style={styles.typewriter}>
-        <Typewriter
-          words={['SEE MY PROJECTS:']}
-          loop={1}
-          cursor
-          cursorStyle="▢"
-          deleteSpeed={9}
-          typeSpeed={140}
-          delaySpeed={1000}
-        />
-      </div>
-      <div>
-        <Carousel
-          containerClass="container"
-          swipeable={true}
-          draggable={true}
-          infinite={true}
-          responsive={responsive}
-        >
-          {projects.map((project, i) => (
-            <Card
-              key={i}
-              project={project}
-              style={styles.cardContainer}
-              elevation="8"
-              className="project"
-            >
-              <CardActionArea onClick={handleOpen}>
-                <CardMedia
-                  component="img"
-                  alt="project"
-                  height="230rem"
-                  image={project.image}
-                  style={styles.img}
-                  sx={{ objectFit: 'contain' }}
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography
-                  height="3.5em"
-                  variant="h5"
-                  gutterBottom
-                  style={styles.textColor2}
+    <>
+      <ThemeProvider theme={theme}>
+        <Box component="div" style={styles.mainContainer}>
+          <div style={styles.typewriter}>
+            <Typewriter
+              words={['SEE MY PROJECTS:']}
+              loop={1}
+              cursor
+              cursorStyle="▢"
+              deleteSpeed={9}
+              typeSpeed={140}
+              delaySpeed={1000}
+            />
+          </div>
+          <Grid container spacing={2}>
+            {projects.map((project, i) => (
+              <Grid xs={12} sm={12} md={12} lg={6} xl={4} key={i}>
+                <Card
+                  project={project}
+                  style={styles.cardContainer}
+                  elevation="8"
+                  className="project"
                 >
-                  {project.name}
-                </Typography>
-                <Typography style={styles.description}>
-                  {project.description}
-                </Typography>
-                <Typography style={styles.technologies}>
-                  {project.Technologies}
-                </Typography>
-              </CardContent>
+                  {/* <CardActionArea onClick={handleOpen}> */}
+                  <CardMedia
+                    component="img"
+                    alt="project"
+                    height="230rem"
+                    image={project.image}
+                    style={styles.img}
+                    sx={{ objectFit: 'contain' }}
+                  />
+                  {/* </CardActionArea> */}
+                  <CardContent>
+                    <Typography
+                      height="3.5em"
+                      variant="h5"
+                      gutterBottom
+                      style={styles.textColor2}
+                    >
+                      {project.name}
+                    </Typography>
+                    <Typography style={styles.description}>
+                      {project.description}
+                    </Typography>
+                    <Typography style={styles.technologies}>
+                      {project.Technologies}
+                    </Typography>
+                  </CardContent>
 
-              <CardActions style={styles.CardActions}>
-                <Button
-                  variant="outlined"
-                  style={styles.textColor}
-                  startIcon={<GitHub />}
-                  href={project.gitHub}
-                  target="_blank"
-                >
-                  Github
-                </Button>
-                {project.deployed && (
-                  <Button
-                    variant="outlined"
-                    style={styles.textColor}
-                    startIcon={<DoubleArrow />}
-                    href={project.deployed}
-                    target="_blank"
-                  >
-                    Deployed App
-                  </Button>
-                )}
-                {project.video && (
-                  <Button
-                    variant="outlined"
-                    style={styles.textColor}
-                    startIcon={<SmartDisplay />}
-                    href={project.video}
-                    target="_blank"
-                  >
-                    Video
-                  </Button>
-                )}
-              </CardActions>
-            </Card>
-          ))}
-        </Carousel>
-      </div>
-      {/* </Box> */}
-    </div>
+                  <CardActions style={styles.CardActions}>
+                    <Button
+                      variant="outlined"
+                      style={styles.textColor}
+                      startIcon={<GitHub />}
+                      href={project.gitHub}
+                      target="_blank"
+                    >
+                      Github
+                    </Button>
+                    {project.deployed && (
+                      <Button
+                        variant="outlined"
+                        style={styles.textColor}
+                        startIcon={<DoubleArrow />}
+                        href={project.deployed}
+                        target="_blank"
+                      >
+                        Deployed App
+                      </Button>
+                    )}
+                    {project.video && (
+                      <Button
+                        variant="outlined"
+                        style={styles.textColor}
+                        startIcon={<SmartDisplay />}
+                        href={project.video}
+                        target="_blank"
+                      >
+                        Video
+                      </Button>
+                    )}
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </ThemeProvider>
+    </>
   );
 }
