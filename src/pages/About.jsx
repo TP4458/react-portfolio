@@ -4,7 +4,7 @@ import { Container, Typography, Grid, Link, Box } from '@mui/material';
 import { Typewriter } from 'react-simple-typewriter';
 import skills from '../data/skills';
 
-const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
+const fontFamily = ['Raleway', 'Kode Mono', 'Poppins', 'Roboto'].join(',');
 
 const styles = {
   mainGrid: {},

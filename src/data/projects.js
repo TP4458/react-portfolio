@@ -11,8 +11,37 @@ import emptracker from '../assets/images/emptracker.png/';
 import clown from '../assets/images/clown.png';
 import tech from '../assets/images/techblog.png';
 import sspeed from '../assets/images/searchSpeed.png';
+import feed from '../assets/images/feed.JPG';
 
 const projects = [
+  {
+    name: 'Feed The World - A foodbank search App',
+    Technologies: 'Apollo GraphQl, MongoDB, Mongoose, React, JWT, MUI ',
+    description:
+      " Final bootcamp project, to which I contributed as a Team Lead and by building large parts of the database and GraphQL service, 'Feed the World' is a webapp that allows users to view Food Banks all over the UK. The user can search for a location and it will return the closest food banks to that location. The user can also log in and when signed in they can save said food banks so that they can view their saved food banks and not have to search for them again. The food banks also show their needed items so users can see what resources the food banks are currently in most dire need of.",
+    image: feed,
+    gitHub: 'https://github.com/nottheternaryoperator/feed-the-world',
+    deployed: 'https://feed-the-world-app-8b7198cc88e3.herokuapp.com/',
+  },
+  {
+    name: '"Clowning Around" - entertainment industry job board',
+    Technologies: 'Handlebars, Bootstrap, Sequelize, Express',
+    description:
+      "This was a second major bootcamp project, in which we've built a job board, focused on providing a service to the recruiters. I've contributed to the project by creating a wireframe, building the database, adding authentication, and definging most of the Express routes.",
+    image: clown,
+    gitHub: 'https://github.com/TP4458/clowning-around-entertainment-job-board',
+    deployed: 'https://still-depths-15165-644cc0ba8436.herokuapp.com/',
+  },
+  {
+    name: '"Is It Worth It?"" Food&Fitness Tracker',
+    Technologies: 'JQuery, Tailwind, JS',
+    description:
+      'First bootcamp group project! It allows a user to simply input a snack, meal, or favourite type of food, and then returns a two-fold response: recipe, and information on how long would it take to burn off the calories from searched meal through excercise.',
+    image: worthy,
+    gitHub: 'https://github.com/TP4458/Is-It-Worth-It-Food-and-Fitness-Tracker',
+    deployed:
+      'https://tp4458.github.io/Is-It-Worth-It-Food-and-Fitness-Tracker/',
+  },
   {
     name: 'Text Editor - PWA',
     Technologies: 'Webpack+Workbox, IndexedDB, JS, Express, NodeJS ',
@@ -50,15 +79,7 @@ const projects = [
     gitHub: 'https://github.com/TP4458/Tech-Blog-MVC',
     deployed: 'https://techblog-mvc-tp4458-494945b75097.herokuapp.com/',
   },
-  {
-    name: '"Clowning Around" - entertainment industry job board',
-    Technologies: 'Handlebars, Bootstrap, Sequelize, Express',
-    description:
-      "This was a second major bootcamp project, in which we've built a job board, focused on providing a service to the recruiters. I've contributed to the project by creating a wireframe, building the database, adding authentication, and definging most of the Express routes.",
-    image: clown,
-    gitHub: 'https://github.com/TP4458/clowning-around-entertainment-job-board',
-    deployed: 'https://still-depths-15165-644cc0ba8436.herokuapp.com/',
-  },
+
   {
     name: 'Backed for a E-Commerce website',
     Technologies: 'NodeJS, MySQL, Express',
@@ -109,16 +130,7 @@ const projects = [
     video:
       'https://drive.google.com/file/d/1uTkfHb9k6xFBJx45MzpU1-isSECszdsI/view?usp=sharing',
   },
-  {
-    name: '"Is It Worth It?"" Food&Fitness Tracker',
-    Technologies: 'JQuery, Tailwind, JS',
-    description:
-      'First bootcamp group project! It allows a user to simply input a snack, meal, or favourite type of food, and then returns a two-fold response: recipe, and information on how long would it take to burn off the calories from searched meal through excercise.',
-    image: worthy,
-    gitHub: 'https://github.com/TP4458/Is-It-Worth-It-Food-and-Fitness-Tracker',
-    deployed:
-      'https://tp4458.github.io/Is-It-Worth-It-Food-and-Fitness-Tracker/',
-  },
+
   {
     name: 'Weather Dashboard',
     Technologies: 'JS, HTML, CSS',

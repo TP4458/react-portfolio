@@ -5,7 +5,6 @@ import links from '../data/links';
 import { Typewriter } from 'react-simple-typewriter';
 
 export default function Contact() {
-  const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
   const styles = {
     icon: {
       color: 'var(--tetriaryColor)',
@@ -21,17 +20,14 @@ export default function Contact() {
     link: {
       underline: 'none',
       textDecoration: 'none',
-      fontFamily: fontFamily,
     },
     typewriter: {
-      fontFamily: ['Kode Mono', 'Poppins', 'Roboto'],
       letterSpacing: '4px',
       marginBottom: '20vh',
       marginTop: '12vh',
       fontSize: '2.5rem',
     },
     typography: {
-      fontFamily: ['Kode Mono', 'Poppins', 'Roboto'],
       fontSize: '1.4rem',
     },
   };

@@ -38,7 +38,7 @@ body {
   box-sizing: border-box;
   font-size: 3rem;
   line-height: 1.5;
-  font-family: 'Kode Mono', 'Poppins', sans-serif;
+  font-family: 'Raleway', 'Kode Mono', 'Poppins', sans-serif;
   background-color: var(--darkColor);
   text-align: center;
   color: var(--lightColor);

@@ -21,8 +21,6 @@ import { ThemeProvider } from '@emotion/react';
 // import Carousel from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
 
-const fontFamily = ['Kode Mono', 'Poppins', 'Roboto'].join(',');
-
 const theme = createTheme({
   breakpoints: {
     values: {
@@ -40,7 +38,6 @@ const styles = {
     // display: 'flex',
     // flexDirection: 'column',
     background: 'var(--darkColor)',
-    fontFamily: fontFamily,
   },
   cardContainer: {
     flex: 1,
@@ -54,20 +51,24 @@ const styles = {
     color: 'var(--tetriaryColor)',
     border: 'none',
     // fontWeight: 'bold',
-    fontFamily: fontFamily,
   },
   textColor2: {
     color: 'var(--primeColor)',
-    fontFamily: fontFamily,
     fontWeight: 'Bold',
   },
   textColor3: {
     color: 'var(--primeColor)',
-    fontFamily: fontFamily,
   },
-  img: {
+  imgWrap: {
     background: 'var(--secondColor)',
     objectFit: 'cover',
+    margin: '0.2em',
+    justify: 'center',
+    borderRadius: '10px',
+  },
+  img: {
+    objectFit: 'cover',
+    borderRadius: '10px',
   },
 
   typewriter: {
@@ -80,7 +81,6 @@ const styles = {
   },
   description: {
     color: 'var(--tetriaryColor)',
-    fontFamily: fontFamily,
     // textWrap: 'balance',
     textAlign: 'left',
     height: '17em',
@@ -96,7 +96,6 @@ const styles = {
 
   technologies: {
     color: 'var(--primeColor)',
-    fontFamily: fontFamily,
     paddingTop: 5,
   },
 };
@@ -131,14 +130,17 @@ export default function Projects() {
                   className="project"
                 >
                   {/* <CardActionArea onClick={handleOpen}> */}
-                  <CardMedia
-                    component="img"
-                    alt="project"
-                    height="230rem"
-                    image={project.image}
-                    style={styles.img}
-                    sx={{ objectFit: 'contain' }}
-                  />
+                  <div style={styles.imgWrap}>
+                    <CardMedia
+                      style={styles.img}
+                      component="img"
+                      alt="project"
+                      height="230rem"
+                      image={project.image}
+
+                      // sx={{ objectFit: 'contain' }}
+                    />
+                  </div>
                   {/* </CardActionArea> */}
                   <CardContent>
                     <Typography
