@@ -3,7 +3,7 @@ import node from '../assets/images/node.png';
 import quiz from '../assets/images/quizpage-1.jfif';
 import wday from '../assets/images/wday.jfif';
 import weather from '../assets/images/weather.png';
-import worthy from '../assets/images/worth.jpg';
+import worthy from '../assets/images/worth.JPG';
 import readmegen from '../assets/images/readme1.png';
 import svg from '../assets/images/svg.jfif';
 import notes from '../assets/images/notes.png';
