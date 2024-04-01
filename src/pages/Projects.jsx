@@ -71,10 +71,6 @@ const styles = {
     borderRadius: '10px',
   },
 
-  typewriter: {
-    float: 'left',
-    marginBottom: '20px',
-  },
   CardActions: {
     alignItems: 'flexEnd',
     justifyContent: 'flexEnd',
@@ -93,6 +89,27 @@ const styles = {
     lineHeight: 1.7,
     // position: 'absolute',
   },
+  head: {
+    width: '45rem',
+    fontSize: '2.5rem',
+    letterSpacing: '4px',
+    lineHeight: '2em',
+    textAlign: 'start',
+    textWrap: 'balanced',
+    paddingBottom: '2rem',
+    paddingTop: '2rem',
+    marginLeft: '10rem',
+  },
+  aboutTxt: {
+    width: '40rem',
+    fontSize: '1.2rem',
+    letterSpacing: '1.9px',
+    lineHeight: '2em',
+    textAlign: 'start',
+    textWrap: 'balanced',
+    marginLeft: '10rem',
+    paddingBottom: '12rem',
+  },
 
   technologies: {
     color: 'var(--primeColor)',
@@ -109,17 +126,11 @@ export default function Projects() {
     <>
       <ThemeProvider theme={theme}>
         <Box component="div" style={styles.mainContainer}>
-          <div style={styles.typewriter}>
-            <Typewriter
-              words={['SEE MY PROJECTS:']}
-              loop={1}
-              cursor
-              cursorStyle="▢"
-              deleteSpeed={9}
-              typeSpeed={140}
-              delaySpeed={1000}
-            />
-          </div>
+          <Typography style={styles.head}>PROJECTS.</Typography>
+          <Typography style={styles.aboutTxt}>
+            THIS PAGE LISTS MY WORK AND DOCUMENTS MY PROGRESS IN WEB
+            DEVELOPMENT.{' '}
+          </Typography>
           <Grid container spacing={2}>
             {projects.map((project, i) => (
               <Grid xs={12} sm={12} md={12} lg={6} xl={4} key={i}>

@@ -99,6 +99,10 @@ button:hover {
   transition: all 1s ease-in-out;
 }
 
+link {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }

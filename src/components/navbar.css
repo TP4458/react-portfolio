@@ -11,7 +11,7 @@ header {
   background-color: var(--darkColor);
   border-bottom: 1px solid var(--lightColor);
   z-index: 1;
-  font-family: 'Kode Mono', sans-serif;
+  font-family: 'RalewayletterSpacin', sans-serif;
 }
 
 .nav-wrapper {
@@ -31,8 +31,8 @@ header {
 .projects,
 .contact {
   width: 15rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  /* font-weight: bold; */
   letter-spacing: 1px;
   text-decoration: none;
 }
