@@ -8,7 +8,7 @@ import readmegen from '../assets/images/readme1.png';
 import svg from '../assets/images/svg.jfif';
 import notes from '../assets/images/notes.png';
 import emptracker from '../assets/images/emptracker.png/';
-import clown from '../assets/images/clown.png';
+import clown from '../assets/images/clown.jpg';
 import tech from '../assets/images/techblog.png';
 import sspeed from '../assets/images/searchSpeed.png';
 import feed from '../assets/images/feed.JPG';
